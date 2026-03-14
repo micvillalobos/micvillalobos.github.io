@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- DOCTYPE tells the browser this is an HTML5 document -->
+
+<html>
+<!-- The html tag is the root element. Everything on the page goes inside here -->
+
+<head>
+    <!-- The head section contains information about the page.-->
+
+    <title>My Profile: Michael Villalobos</title>
+    <!-- The title tag sets the text shown on the browser tab -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- This meta tag makes the page display correctly on mobile devices.
+         Without this, mobile browsers would zoom out and show the desktop version. -->
+
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <!-- This links the external CSS stylesheet to this HTML file.
+         The href tells the browser where to find the stylesheet. -->
+
+</head>
+
+<body>
+<!-- The body tag contains everything visible on the webpage -->
+
+    <header>
+        <!-- The header element is at the top of the page.
+             It contains the site title and the navigation menu. -->
+
+        <p>My Personal Website</p>
+        <!-- This paragraph shows the name of the website in the header -->
+
+        <nav>
+            <!-- The nav element contains the navigation menu.
+                 It holds the links that let users jump to each section. -->
+
+            <ul>
+                <!-- ul means unordered list. It holds the menu items as a list. -->
+
+                <li><a href="#about">About Me</a></li>
+                <!-- li means list item. The a tag is a link.
+                     href="#about" jumps to the section with id="about" on the page. -->
+
+                <li><a href="#hobbies">Hobbies</a></li>
+                <!-- Links to the Hobbies section -->
+
+                <li><a href="#funfact">Fun Fact</a></li>
+                <!-- Links to the Fun Fact section -->
+
+                <li><a href="#contact">Contact</a></li>
+                <!-- Links to the Contact section -->
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="about">
+        <!-- The section tag groups related content together.
+             id="about" gives this section a unique name so the nav link can jump to it. -->
+
+        <h1>About Me</h1>
+        <!-- h1 is the biggest heading. Each section uses h1 for its title. -->
+
+        <div class="about-content">
+            <!-- This div is a container that wraps the image and the paragraph together.
+                 class="about-content" connects it to the CSS rule that puts them side by side. -->
+
+            <img src="images/me_beach.jpg" alt="Profile Picture" class="profile-img"/>
+            <!-- The img tag displays a picture.
+                 src tells the browser where the image file is located.
+                 alt is a text description shown if the image cannot load.
+                 class="profile-img" connects it to the CSS rule that styles the image. -->
+
+            <p>Hi! My name is Michael Villalobos. I am a Diploma in Computer Science student from the University of the Philippines Open University, currently learning Web Programming and Development. This is my personal webpage. In my free time, I enjoy playing games, watching anime, and listening to K-pop music. My profile picture was taken during one of my trips to the islands of Islas de Gigantes in Iloilo. (If you wish to see it bigger, you can hover it if you're on your desktop or you can tap on it if you're on mobile.)</p>
+            <!-- This paragraph shows the contents introducing myself -->
+
+        </div>
+    </section>
+
+
+    <section id="hobbies">
+        <!-- The Hobbies section. id="hobbies" lets the nav link jump here. -->
+
+        <h1>My Hobbies</h1>
+
+        <div class="hobby">
+            <!-- Each hobby is wrapped in a div with class="hobby".
+                 This connects it to the CSS rule that gives each hobby a styled box. -->
+
+            <h2>Playing PC Games</h2>
+            <!-- h2 is a smaller heading used for subsections inside a section -->
+
+            <p>I love playing PC games. Some of my favorites are <strong>Stardew Valley</strong> and <strong>Civilization 5</strong>. Stardew Valley is relaxing and fun RPG game that let's you simulate farm life. Civilization 5 is a turn-based strategy game that involves geography and history.</p>
+            <!-- The strong tag makes text bold to highlight the game titles -->
+
+            <div class="hobby-images">
+                <!-- This div wraps the images for this hobby so they sit side by side.
+                     class="hobby-images" connects it to the CSS rule that arranges them. -->
+
+                <div class="hobby-image-item">
+                    <!-- This div wraps one image and its label together -->
+
+                    <img src="images/stardew.jpg" alt="Stardew Valley" class="hobby-img"/>
+                    <!-- This img tag displays a PC game image. -->
+
+                    <p class="hobby-img-label">Stardew Valley</p>
+                    <!-- This paragraph shows the name of the game below the image -->
+
+                </div>
+
+                <div class="hobby-image-item">
+                    <!-- Second image item for this hobby -->
+
+                    <img src="images/civilization5.jpg" alt="Civilization 5" class="hobby-img"/>
+                    <!-- This img tag displays a PC game image. -->
+
+                    <p class="hobby-img-label">Civilization 5</p>
+                    <!-- This paragraph shows the name of the game below the image -->
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h2>Watching Anime</h2>
+            <p>I enjoy watching <strong>slice of life anime</strong> because it is very healing and fun to watch. My favorites are <strong>K-On!</strong> and <strong>Barakamon</strong>. K-On! is about a school music club and their fun daily lives. Barakamon is about a calligrapher who moves to a small island where he spends his time with the villagers.</p>
+
+            <div class="hobby-images">
+                <!-- This div wraps the images for this hobby so they sit side by side -->
+
+                <div class="hobby-image-item">
+                    <img src="images/kon.jpg" alt="K-On!" class="hobby-img"/>
+                    <!-- This img tag displays an anime image. -->
+
+                    <p class="hobby-img-label">K-On!</p>
+                    <!-- This paragraph shows the name of the anime below the image -->
+                </div>
+
+                <div class="hobby-image-item">
+                    <img src="images/barakamon.jpg" alt="Barakamon" class="hobby-img"/>
+                    <!-- This img tag displays an anime image. -->
+
+                    <p class="hobby-img-label">Barakamon</p>
+                    <!-- This paragraph shows the name of the anime below the image -->
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hobby">
+            <h2>Listening to K-Pop</h2>
+            <p>I like listening to <strong>K-pop</strong>, especially girl groups. My favorite group is <strong>TWICE</strong>. Their songs are catchy and fun to listen to. My bias is <strong>Sana</strong>.</p>
+
+            <div class="hobby-images">
+                <!-- This div wraps the image for this hobby -->
+
+                <div class="hobby-image-item">
+                    <img src="images/twice.jpg" alt="TWICE" class="hobby-img"/>
+                    <!-- This img tag displays a K-pop image. -->
+
+                    <p class="hobby-img-label">TWICE</p>
+                    <!-- This paragraph shows the name of the K-pop group below the image -->
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="funfact">
+        <!-- The Fun Fact section. id="funfact" lets the nav link jump here. -->
+
+        <h1>Fun Fact</h1>
+
+        <p class="fun-fact-box" id="fun-fact-box">Click the button below to learn a fun fact about me!</p>
+        <!-- This paragraph shows the fun fact text.
+             class="fun-fact-box" connects it to the CSS rule that styles the box.
+             id="fun-fact-box" lets the JavaScript find and change this text when the button is clicked. -->
+
+        <button onclick="showFact()">Show Fun Fact</button>
+        <!-- The button tag creates a clickable button.
+             onclick="showFact()" tells the browser to run the showFact function
+             from script.js when this button is clicked. -->
+
+    </section>
+
+
+    <section id="contact">
+        <!-- The Contact section. id="contact" lets the nav link jump here. -->
+
+        <h1>Contact Me</h1>
+
+        <p>Email: <a href="mailto:mvillalobos@up.edu.ph">mvillalobos@up.edu.ph</a></p>
+        <!-- The a tag with href="mailto:" opens the user's email app when clicked. -->
+
+        <p>Github: <a href="https://github.com/micvillalobos">https://github.com/micvillalobos</a></p>
+        <!-- This directs to the github profile page. -->
+
+        <p>Facebook: <a href="#">My Facebook</a></p>
+        <!-- href="#" is a placeholder for Facebook profile URL. -->
+
+        <p>Instagram: <a href="#">My Instagram</a></p>
+        <!-- href="#" is a placeholder for Instagram profile URL. -->
+
+    </section>
+
+
+    <footer>
+        <!-- The footer element appears at the bottom of the page. -->
+
+        <p>Made by Michael Villalobos &copy; 2026</p>
+        <!-- &copy; is an HTML code that displays the copyright symbol: © -->
+
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- This loads the external JavaScript file.
+         It is placed at the bottom of the body so the whole page loads first
+         before the script runs. This makes sure the button exists before
+         the JavaScript tries to find it. -->
+
+</body>
+</html>

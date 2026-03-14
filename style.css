@@ -1,0 +1,306 @@
+/* =============================================
+   style.css
+   This file controls how the webpage looks.
+   It sets colors, fonts, spacing, and layout.
+   ============================================= */
+
+
+/* --- Basic Page Styles ---
+   These rules apply to the whole page. */
+body {
+    background-color: #f5f5f5; /* sets the page background to a light gray */
+    font-family: sans-serif;     /* sets the text font to a clean, simple style */
+    color: #111111;            /* sets the default text color to near-black since #000000 or pure-black can be inconsistent in some devices*/
+    margin-left: auto;           /* centers the page content horizontally */
+    margin-right: auto;          /* works together with margin-left to center the page */
+    max-width: 900px;            /* the page will not stretch wider than 900px */
+    min-width: 280px;            /* the page will not shrink smaller than 280px */
+    padding-left: 24px;          /* adds space on the left side so text is not touching the edge */
+    padding-right: 24px;         /* adds space on the right side */
+}
+
+
+/* --- Header ---
+   Styles the top bar that contains the site title and navigation menu. */
+header {
+    background-color: #7B1113; /* sets the header background to maroon */
+    color: white;              /* sets text inside the header to white */
+    padding: 16px;               /* adds space inside the header on all sides */
+    border-radius: 8px;          /* rounds the corners of the header box */
+    margin-top: 16px;            /* adds space above the header */
+}
+
+header p {
+    /* Styles the site title text inside the header */
+    font-weight: bold;         /* makes the title text bold */
+    font-size: 18px;           /* sets the title text size */
+    margin-top: 0px;           /* removes the default top spacing on the paragraph */
+    margin-bottom: 8px;        /* adds a small gap between the title and the nav menu */
+}
+
+
+/* --- Navigation Menu ---
+   Styles the list of links inside the nav element. */
+nav ul {
+    list-style-type: none;       /* removes the bullet points from the list */
+    background-color: #014421; /* sets the nav bar background to green */
+    border: 2px solid #111111; /* adds a dark border around the nav bar */
+    border-radius: 8px;          /* rounds the corners of the nav bar */
+    padding: 12px;               /* adds space inside the nav bar */
+}
+
+nav ul li {
+    /* Styles each individual menu item */
+    display: inline;                      /* makes the list items appear side by side instead of stacked */
+    border-right: 2px solid #111111;    /* adds a divider line between each menu item */
+    padding-right: 8px;                   /* adds space to the right of each menu item */
+    padding-left: 8px;                    /* adds space to the left of each menu item */
+}
+
+nav ul li:last-child {
+    /* Targets only the last menu item in the list */
+    border-right: none;        /* removes the divider line after the last menu item */
+}
+
+nav ul li a {
+    /* Styles the link text inside each menu item */
+    text-decoration: none;                  /* removes the default underline from links */
+    color: white;                         /* sets the link text color to white */
+    font-weight: bold;                      /* makes the link text bold */
+    transition: color 0.3s;                 /* smoothly animates the color change when hovered.
+                                               0.3s means the animation takes 0.3 seconds. */
+}
+
+nav ul li a:hover {
+    /* Styles the link when the mouse hovers over it */
+    text-decoration: underline;             /* adds an underline when hovering to show it is clickable */
+    color: #ffb61c;                       /* changes the link text to a gold color when hovered */
+}
+
+
+/* --- Sections ---
+   Styles the main content boxes on the page. */
+section {
+    background-color: white;   /* sets each section background to white */
+    border: 2px solid #cccccc; /* adds a light gray border around each section */
+    border-radius: 8px;          /* rounds the corners of each section */
+    padding: 24px;               /* adds space inside each section */
+    margin-top: 24px;            /* adds space above each section */
+    margin-bottom: 24px;         /* adds space below each section */
+}
+
+section h1 {
+    /* Styles the heading inside each section */
+    color: #7B1113;                    /* sets the heading text color to maroon */
+    border-bottom: 2px solid #014421;  /* adds a green underline below the heading */
+    padding-bottom: 8px;                 /* adds a small gap between the heading text and the underline */
+}
+
+
+/* --- About Section Layout ---
+   Controls how the profile picture and text are arranged side by side. */
+.about-content {
+    display: flex;             /* makes the image and paragraph sit side by side */
+    align-items: flex-start;   /* aligns the image and text to the top */
+    gap: 24px;                 /* adds space between the image and the text */
+}
+
+
+/* --- Profile Image ---
+   Styles the profile picture in the About Me section. */
+.profile-img {
+    height: 180px;                      /* sets the height of the profile picture */
+    border: 3px solid #7B1113;        /* adds a maroon border around the picture */
+    border-radius: 8px;                 /* rounds the corners of the picture */
+    flex-shrink: 0;                     /* prevents the image from shrinking when the screen is smaller */
+    transition: transform 0.3s;         /* smoothly animates the size change when hovered.
+                                           transform is the property being animated.
+                                           0.3s means the animation takes 0.3 seconds. */
+}
+
+.profile-img:hover {
+    /* Styles the profile picture when the mouse hovers over it */
+    transform: scale(2);             /* makes the image bigger when hovered.
+                                           scale(2) means 200% of its original size. */
+}
+
+
+/* --- Hobby Boxes ---
+   Styles each individual hobby inside the Hobbies section. */
+.hobby {
+    background-color: #f9f9f9;        /* sets a slightly off-white background for each hobby box */
+    border: 2px solid #014421;        /* adds a green border around each hobby box */
+    border-radius: 8px;                 /* rounds the corners of each hobby box */
+    padding: 16px;                      /* adds space inside each hobby box */
+    margin-bottom: 16px;                /* adds space below each hobby box to separate them */
+    transition: border-color 0.3s;      /* smoothly animates the border color change when hovered.
+                                           0.3s means the animation takes 0.3 seconds. */
+}
+
+.hobby:hover {
+    /* Styles the hobby box when the mouse hovers over it */
+    border-color: #7B1113;            /* changes the hobby box border to maroon when hovered */
+}
+
+.hobby h2 {
+    /* Styles the hobby title heading */
+    color: #014421;            /* sets the hobby title color to green */
+    margin-top: 0px;             /* removes the default top spacing on the heading */
+}
+
+
+/* --- Hobby Images ---
+   Styles the row of images inside each hobby box. */
+.hobby-images {
+    display: flex;             /* makes the images sit side by side in a row */
+    gap: 16px;                 /* adds space between each image */
+    margin-top: 12px;          /* adds space above the image row to separate it from the text */
+    flex-wrap: wrap;           /* allows images to wrap to the next line if there is not enough space */
+}
+
+.hobby-image-item {
+    /* Wraps one image and its label together */
+    text-align: center;        /* centers the label text below the image */
+}
+
+.hobby-img {
+    height: 140px;                      /* sets the height of each hobby image */
+    width: 200px;                       /* sets the width of each hobby image */
+    object-fit: cover;                  /* makes the image fill the box without stretching or squishing */
+    border: 2px solid #014421;        /* adds a green border around each hobby image */
+    border-radius: 8px;                 /* rounds the corners of each hobby image */
+    display: block;                     /* makes the image a block element so the label sits below it */
+    transition: transform 0.3s,
+                border-color 0.3s;      /* smoothly animates both the size and border color when hovered.
+                                           listing two properties separated by a comma animates both at once. */
+}
+
+.hobby-img:hover {
+    /* Styles each hobby image when the mouse hovers over it */
+    transform: scale(1.05);             /* makes the image slightly bigger when hovered */
+    border-color: #7B1113;            /* changes the image border to maroon when hovered */
+}
+
+.hobby-img-label {
+    /* Styles the name shown below each hobby image */
+    font-size: 13px;           /* makes the label text slightly smaller than normal */
+    color: #014421;          /* sets the label text color to green */
+    margin-top: 6px;           /* adds a small gap between the image and the label */
+    margin-bottom: 0px;        /* removes the default bottom spacing on the paragraph */
+}
+
+
+/* --- Fun Fact Box ---
+   Styles the text box that displays the fun fact. */
+.fun-fact-box {
+    background-color: #fff8e1; /* sets a light yellow background for the fun fact box */
+    border: 2px solid #7B1113; /* adds a maroon border around the fun fact box */
+    border-radius: 8px;          /* rounds the corners of the fun fact box */
+    padding: 12px;               /* adds space inside the fun fact box */
+}
+
+
+/* --- Button ---
+   Styles the Show Fun Fact button. */
+button {
+    background-color: #7B1113;        /* sets the button background color to maroon */
+    color: white;                     /* sets the button text color to white */
+    border: none;                       /* removes the default border on the button */
+    padding: 10px 20px;                 /* adds space inside the button (top/bottom, left/right) */
+    border-radius: 6px;                 /* rounds the corners of the button */
+    font-size: 14px;                    /* sets the button text size */
+    cursor: pointer;                    /* changes the mouse cursor to a hand when hovering over the button */
+    transition: background-color 0.3s,
+                transform 0.2s;         /* smoothly animates the background color and size when hovered.
+                                           background-color takes 0.3s and transform takes 0.2s. */
+}
+
+button:hover {
+    /* Styles the button when the mouse hovers over it */
+    background-color: #014421;        /* changes the button color to green when hovered */
+    transform: scale(1.05);             /* makes the button slightly bigger when hovered */
+}
+
+
+/* --- Contact Links ---
+   Styles the links inside the Contact section. */
+#contact a {
+    color: #7B1113;                   /* sets the contact link color to maroon */
+    transition: color 0.3s;             /* smoothly animates the color change when hovered */
+}
+
+#contact a:hover {
+    color: #014421;                   /* changes the contact link color to green when hovered */
+}
+
+
+/* --- Footer ---
+   Styles the bottom bar of the page. */
+footer {
+    background-color: #7B1113; /* sets the footer background to maroon */
+    color: white;              /* sets the footer text color to white */
+    text-align: center;          /* centers the text inside the footer */
+    padding: 12px;               /* adds space inside the footer */
+    border-radius: 8px;          /* rounds the corners of the footer */
+    margin-top: 16px;            /* adds space above the footer */
+    margin-bottom: 16px;         /* adds space below the footer */
+}
+
+
+/* --- Responsive: Mobile Layout ---
+   These rules only apply when the screen is 600px wide or smaller.
+   They make the page easier to read and use on mobile. */
+@media all and (max-width: 600px) {
+
+    body {
+        font-size: 18px;       /* increases the base text size for easier reading on mobile */
+        padding-left: 12px;    /* reduces the left padding since screen space is limited */
+        padding-right: 12px;   /* reduces the right padding */
+    }
+
+    section h1 {
+        font-size: 26px;       /* increases the section heading size on mobile */
+    }
+
+    .hobby h2 {
+        font-size: 22px;       /* increases the hobby heading size on mobile */
+    }
+
+    section {
+        padding: 14px;         /* reduces the padding inside sections to save vertical space */
+        margin-top: 14px;      /* reduces the space above each section */
+        margin-bottom: 14px;   /* reduces the space below each section */
+    }
+
+    .hobby {
+        padding: 10px;         /* reduces the padding inside each hobby box */
+        margin-bottom: 10px;   /* reduces the space between hobby boxes */
+    }
+
+    .hobby-img {
+        height: 110px;         /* makes hobby images smaller on mobile */
+        width: 150px;          /* reduces the width of hobby images on mobile */
+    }
+
+    .about-content {
+        flex-direction: column; /* stacks the image above the text instead of side by side */
+        align-items: center;    /* centers the image horizontally when stacked */
+    }
+
+    .profile-img {
+        height: 130px;         /* makes the profile picture smaller on mobile */
+    }
+
+    nav ul li {
+        display: block;                       /* stacks the nav links vertically instead of side by side */
+        border-right: none;                   /* removes the side divider since links are now stacked */
+        border-bottom: 1px solid #111111;   /* adds a divider line below each link instead */
+        padding-top: 8px;                     /* adds space above each nav link */
+        padding-bottom: 8px;                  /* adds space below each nav link */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;   /* removes the divider line after the last nav link */
+    }
+
+}
