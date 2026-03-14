@@ -61,4 +61,4 @@ README.md        - this file
 1. Download or clone the repository.
 2. Open `index.html` in a web browser.
 
-Or visit the live version here: **[\[Live Demo Link\]](https://micvillalobos.github.io/)**
+Or visit the live version here: **[\[My Personal Website\]](https://micvillalobos.github.io/index.html)**
