@@ -120,7 +120,7 @@ section h1 {
 
 .profile-img:hover {
     /* Styles the profile picture when the mouse hovers over it */
-    transform: scale(2);             /* makes the image bigger when hovered.
+    transform: scale(2);                /* makes the image bigger when hovered.
                                            scale(2) means 200% of its original size. */
 }
 
@@ -230,7 +230,7 @@ button:hover {
 }
 
 #contact a:hover {
-    color: #014421;                   /* changes the contact link color to green when hovered */
+    color: #014421;                     /* changes the contact link color to green when hovered */
 }
 
 
@@ -288,7 +288,7 @@ footer {
     }
 
     .profile-img {
-        height: 130px;         /* makes the profile picture smaller on mobile */
+        height: 130px;          /* makes the profile picture smaller on mobile */
     }
 
     nav ul li {
